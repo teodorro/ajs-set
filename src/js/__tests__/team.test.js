@@ -42,6 +42,7 @@ test('addAll should throw if not character', () => {
   const c = new Bowman('ccc');
 
   expect(() => team.addAll('asd')).toThrow('Illegal argument');
+  expect(() => team.addAll(null)).toThrow('Illegal argument');
   expect(() => team.addAll([a, 'b', c])).toThrow('Illegal argument');
   expect(() => team.addAll([a, null, c])).toThrow('Illegal argument');
 });
